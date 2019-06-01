@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 pd=5000;
                 record();
-                /*t = new CountDownTimer(Long.MAX_VALUE, 3000) {
+                t = new CountDownTimer(Long.MAX_VALUE, 3000) {
                     @Override
                     public void onTick(long l) {
                         record();
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onFinish() {
 
                     }
-                }.start();*/
+                }.start();
 
             }
         });
@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             try {
                 FileInputStream fileInputStream = new FileInputStream(selectedFile);
-                URL url = new URL("http://192.168.0.102:5000/fun");
+                URL url = new URL("http://192.168.43.96:5001/fun");
                 connection = (HttpURLConnection) url.openConnection();
                 connection.setDoInput(true);//Allow Inputs
                 connection.setDoOutput(true);//Allow Outputs
@@ -310,19 +310,10 @@ public class MainActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(MainActivity.this, "Done!! "+ finalServerResponse, Toast.LENGTH_SHORT).show();
+                             // Toast.makeText(MainActivity.this, finalServerResponse, Toast.LENGTH_SHORT).show();
 
-                            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-
-                            long[] pattern = {0, 1000, 500, 2000, 500, 3000};
-
-                            // Vibrate for 500 milliseconds
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                                v.vibrate(VibrationEffect.createOneShot(1000,  VibrationEffect.DEFAULT_AMPLITUDE));
-                            } else {
-                                //deprecated in API 26
-                                v.vibrate(pattern, -1);
-                            }
+                            if (finalServerResponse.equals("1")){
+vibrate();                            }
 
                         }
                     });
