@@ -17,15 +17,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
-        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        StrictMode.setVmPolicy(builder.build());
-        */
+        TextView mEmergencyBtn = findViewById(R.id.emergency_btn);
+        TextView mCommunicationBtn = findViewById(R.id.communication_btn);
 
-        TextView Btn1 = findViewById(R.id.btn1);
-        TextView Btn2 = findViewById(R.id.btn2);
-
-        Btn1.setOnClickListener(new View.OnClickListener() {
+        mEmergencyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ClassificationActivity.class));
@@ -33,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Btn2.setOnClickListener(new View.OnClickListener() {
+        mCommunicationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Hello!!", Toast.LENGTH_SHORT).show();
