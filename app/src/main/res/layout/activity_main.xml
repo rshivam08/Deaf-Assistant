@@ -4,21 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.slytherin.deafassistant.MainActivity">
+    android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Test"
-        android:id="@+id/recordBtn"
-         />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Vibrate"
-        android:id="@+id/vibrate"/>
+        <ImageView
+            android:layout_weight="0.5"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_add_alert_black_24dp" />
+
+        <TextView
+            android:id="@+id/btn1"
+            android:textColor="#8C65DA"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_horizontal"
+            android:text="Emergency"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.25"
+            android:textColor="#FFFFFF"
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Emergency"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+
+    <View
+        android:background="#8C65DA"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_group_black_24dp" />
+
+        <TextView
+            android:textColor="#8C65DA"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="Communication"
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
