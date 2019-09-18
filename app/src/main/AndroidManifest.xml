@@ -30,6 +30,7 @@
         <activity
             android:name=".Sign_language_translation.SignActivity">
         </activity>
+        <activity android:name=".Emergency_Signal_Recognition.ClassificationActivity"/>
     </application>
 
 
