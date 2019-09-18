@@ -20,7 +20,7 @@
             android:src="@drawable/ic_add_alert_black_24dp" />
 
         <TextView
-            android:id="@+id/btn1"
+            android:id="@+id/emergency_btn"
             android:textColor="#8C65DA"
             android:textStyle="bold"
             android:textSize="25dp"
@@ -70,7 +70,7 @@
             android:layout_weight="1"
             android:layout_gravity="center_horizontal"
             android:text="Communication"
-            android:id="@+id/btn2"
+            android:id="@+id/communication_btn"
             android:layout_width="wrap_content"
             android:layout_height="0dp" />
 
