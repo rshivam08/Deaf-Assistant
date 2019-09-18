@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cardano.deafassistant.Emergency_Signal_Recognition.ClassificationActivity;
 import com.example.cardano.deafassistant.Sign_language_translation.SignActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
 
         TextView Btn1 = findViewById(R.id.btn1);
         TextView Btn2 = findViewById(R.id.btn2);
+
+        Btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ClassificationActivity.class));
+
+            }
+        });
 
         Btn2.setOnClickListener(new View.OnClickListener() {
             @Override
